@@ -42,7 +42,7 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.Location = new System.Drawing.Point(31, 99);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 30);
+            this.textBox1.Size = new System.Drawing.Size(174, 30);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "(0,0)";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -79,7 +79,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(320, 24);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(261, 30);
+            this.textBox3.Size = new System.Drawing.Size(245, 30);
             this.textBox3.TabIndex = 1;
             this.textBox3.Text = "(1,1)";
             this.textBox3.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -87,7 +87,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(31, 230);
+            this.linkLabel1.Location = new System.Drawing.Point(31, 257);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(255, 24);
             this.linkLabel1.TabIndex = 5;
@@ -97,19 +97,20 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(320, 99);
+            this.textBox4.Location = new System.Drawing.Point(211, 99);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(261, 134);
+            this.textBox4.Size = new System.Drawing.Size(354, 155);
             this.textBox4.TabIndex = 1;
-            this.textBox4.Text = "岛屿 (0,0) 的信息如下：\r\nX   为   0\r\nXX  为   1023\r\nY   为   0\r\nYY  为   1023";
+            this.textBox4.Text = "岛屿 (0,0) 的信息如下：\r\nX   为      0\r\nXX  为      1023\r\nY   为      0\r\nYY  为      1023\r\n中央" +
+    "坐标为  511,511";
             this.textBox4.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 263);
+            this.ClientSize = new System.Drawing.Size(600, 290);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);

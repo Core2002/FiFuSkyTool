@@ -13,14 +13,19 @@
             return X <= xx && xx <= XX && Y <= zz && zz <= YY;
         }
 
+        public (int, int) IslandCenter()
+        {
+            return ((XX - X) / 2 + X, (YY - Y) / 2 + Y);
+        }
+
         public string GetInfo()
         {
             return @$"岛屿 {ToLocString()} 的信息如下：
-X   为   {X}
-XX  为   {XX}
-Y   为   {Y}
-YY  为   {YY}
-";
+X   为      {X}
+XX  为      {XX}
+Y   为      {Y}
+YY  为      {YY}
+中央坐标为  {IslandCenter().Item1},{IslandCenter().Item2}";
         }
 
         public string ToLocString()
@@ -75,7 +80,7 @@ YY  为   {YY}
                 throw new FormatException($"SkyLoc 不合法！  ->  {SkyLoc}");
             var c = SkyLoc.IndexOf(',');
             var X = int.Parse(SkyLoc[1..c]);
-            var Y = int.Parse(SkyLoc.Substring(c + 1, SkyLoc.IndexOf(')') - c -1));
+            var Y = int.Parse(SkyLoc.Substring(c + 1, SkyLoc.IndexOf(')') - c - 1));
             return GetIsland(X, Y);
         }
     }
