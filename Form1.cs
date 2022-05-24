@@ -39,12 +39,12 @@ namespace FiFu空岛相关工具_第二弹_
             try
             {
                 island = Sky.GetIsland(textBox1.Text);
-                label5.Text = island.GetInfo();
+                textBox4.Text = island.GetInfo();
             }
             catch (Exception)
             {
                 textBox1.BackColor = Color.Red;
-                label5.Text = "";
+                textBox4.Text = "";
             }
         }
 
