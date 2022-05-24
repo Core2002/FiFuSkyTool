@@ -14,6 +14,21 @@ namespace FiFu空岛相关工具_第二弹_
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            IsLand island;
+            textBox2.BackColor = SystemColors.Window;
+            try
+            {
+                var t = textBox2.Text.Split(',');
+                (int, int) Loc = (int.Parse(t[0]), int.Parse(t[1]));
+                (int, int) SkyLoc = (Sky.GetSkyR(Loc.Item1), Sky.GetSkyR(Loc.Item2));
+                island = Sky.GetIsland(SkyLoc.Item1, SkyLoc.Item2);
+                textBox3.Text = island.ToLocString();
+            }
+            catch (Exception)
+            {
+                textBox2.BackColor = Color.Red;
+                textBox3.Text = "";
+            }
 
         }
 
