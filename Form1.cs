@@ -20,6 +20,8 @@ namespace FiFu空岛相关工具_第二弹_
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+            var island = Sky.GetIsland(textBox1.Text);
+            label5.Text = island.GetInfo();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
