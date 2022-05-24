@@ -19,9 +19,18 @@ namespace FiFu空岛相关工具_第二弹_
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
-            var island = Sky.GetIsland(textBox1.Text);
-            label5.Text = island.GetInfo();
+            IsLand island;
+            textBox1.BackColor = SystemColors.Window;
+            try
+            {
+                island = Sky.GetIsland(textBox1.Text);
+                label5.Text = island.GetInfo();
+            }
+            catch (Exception)
+            {
+                textBox1.BackColor = Color.Red;
+                label5.Text = "";
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

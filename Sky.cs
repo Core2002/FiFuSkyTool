@@ -71,7 +71,7 @@ YY  为   {YY}
 
         public static IsLand GetIsland(string SkyLoc)
         {
-            if (SkyLoc.Equals("null") || !SkyLoc.Contains('(') || !SkyLoc.Contains(',') || !SkyLoc.Contains(')'))
+            if (SkyLoc.Equals("null") || !SkyLoc.StartsWith('(') || !SkyLoc.Contains(',') || !SkyLoc.EndsWith(')'))
                 throw new FormatException($"SkyLoc 不合法！  ->  {SkyLoc}");
             var c = SkyLoc.IndexOf(',');
             var X = int.Parse(SkyLoc[1..c]);

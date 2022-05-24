@@ -40,6 +40,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.Location = new System.Drawing.Point(31, 99);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(232, 30);
@@ -89,9 +90,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(320, 132);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 24);
+            this.label5.Size = new System.Drawing.Size(202, 120);
             this.label5.TabIndex = 4;
-            this.label5.Text = "OWO";
+            this.label5.Text = "岛屿 (0,0) 的信息如下：\r\nX   为   0\r\nXX  为   1023\r\nY   为   0\r\nYY  为   1023";
             // 
             // textBox3
             // 
