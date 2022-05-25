@@ -18,6 +18,11 @@
             return ((XX - X) / 2 + X, (YY - Y) / 2 + Y);
         }
 
+        public bool IsOverflow()
+        {
+            return Math.Abs(SkyLoc.Item1) > Sky.MAX_ISLAND || Math.Abs(SkyLoc.Item2) > Sky.MAX_ISLAND;
+        }
+
         public string GetInfo()
         {
             return @$"岛屿 {ToLocString()} 的信息如下：
@@ -62,8 +67,6 @@ YY  为      {YY}
 
         public static IsLand GetIsland(int X, int Y)
         {
-            if (Math.Abs(X) > MAX_ISLAND || Math.Abs(Y) > MAX_ISLAND)
-                throw new FormatException($"SkyLoc 不合法！  ->  ({X},{Y})");
             return new IsLand
             {
                 X = GetR(X),
