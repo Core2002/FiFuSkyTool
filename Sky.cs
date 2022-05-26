@@ -2,18 +2,18 @@
 {
     public class IsLand
     {
-        public (int, int) SkyLoc { get; set; }
-        public int X { get; set; }
-        public int XX { get; set; }
-        public int Y { get; set; }
-        public int YY { get; set; }
+        public (long, long) SkyLoc { get; set; }
+        public long X { get; set; }
+        public long XX { get; set; }
+        public long Y { get; set; }
+        public long YY { get; set; }
 
-        public bool IsInIsLand(int xx, int zz)
+        public bool IsInIsLand(long xx, long zz)
         {
             return X <= xx && xx <= XX && Y <= zz && zz <= YY;
         }
 
-        public (int, int) IslandCenter()
+        public (long, long) IslandCenter()
         {
             return ((XX - X) / 2 + X, (YY - Y) / 2 + Y);
         }
@@ -46,26 +46,26 @@ YY  为      {YY}
 
     public class Sky
     {
-        public static readonly int SIDE = 1024;
+        public static readonly long SIDE = 1024;
 
-        public static readonly int MAX_ISLAND = 29296;
+        public static readonly long MAX_ISLAND = 29296;
 
-        public static int GetR(int SkyR)
+        public static long GetR(long SkyR)
         {
             return SIDE * SkyR;
         }
 
-        public static int GetRR(int SkyR)
+        public static long GetRR(long SkyR)
         {
             return SIDE * (SkyR + 1) - 1;
         }
 
-        public static int GetSkyR(int rr)
+        public static long GetSkyR(long rr)
         {
             return rr >= 0 ? rr / SIDE : -((-rr + SIDE - 1) / SIDE);
         }
 
-        public static IsLand GetIsland(int X, int Y)
+        public static IsLand GetIsland(long X, long Y)
         {
             return new IsLand
             {
@@ -82,8 +82,8 @@ YY  为      {YY}
             if (SkyLoc.Equals("null") || !SkyLoc.StartsWith('(') || !SkyLoc.Contains(',') || !SkyLoc.EndsWith(')'))
                 throw new FormatException($"SkyLoc 不合法！  ->  {SkyLoc}");
             var c = SkyLoc.IndexOf(',');
-            var X = int.Parse(SkyLoc[1..c]);
-            var Y = int.Parse(SkyLoc.Substring(c + 1, SkyLoc.IndexOf(')') - c - 1));
+            var X = long.Parse(SkyLoc[1..c]);
+            var Y = long.Parse(SkyLoc.Substring(c + 1, SkyLoc.IndexOf(')') - c - 1));
             return GetIsland(X, Y);
         }
     }

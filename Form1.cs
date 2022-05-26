@@ -19,8 +19,8 @@ namespace FiFu空岛相关工具_第二弹_
             try
             {
                 var t = textBox2.Text.Split(',');
-                (int, int) Loc = (int.Parse(t[0]), int.Parse(t[1]));
-                (int, int) SkyLoc = (Sky.GetSkyR(Loc.Item1), Sky.GetSkyR(Loc.Item2));
+                (long, long) Loc = (long.Parse(t[0]), long.Parse(t[1]));
+                (long, long) SkyLoc = (Sky.GetSkyR(Loc.Item1), Sky.GetSkyR(Loc.Item2));
                 island = Sky.GetIsland(SkyLoc.Item1, SkyLoc.Item2);
                 if (island.IsOverflow())
                     textBox2.BackColor = Color.Yellow;
