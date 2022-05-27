@@ -25,11 +25,11 @@
 
         public string GetInfo()
         {
-            return @$"岛屿 {ToLocString()} 的信息如下：
-X   为      {X}
-XX  为      {XX}
-Y   为      {Y}
-YY  为      {YY}
+            return @$"岛屿 {ToLocString()} 的信息：
+起始xx：{X}
+终止xx：{XX}
+起始yy：{Y}
+终止yy：{YY}
 中央坐标为  {IslandCenter().Item1},{IslandCenter().Item2}";
         }
 

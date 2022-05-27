@@ -102,8 +102,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(354, 155);
             this.textBox4.TabIndex = 1;
-            this.textBox4.Text = "岛屿 (0,0) 的信息如下：\r\nX   为      0\r\nXX  为      1023\r\nY   为      0\r\nYY  为      1023\r\n中央" +
-    "坐标为  511,511";
+            this.textBox4.Text = "岛屿 (0,0) 的信息：\r\n起始xx：0\r\n终止xx：1023\r\n起始yy：0\r\n终止yy：1023\r\n中央坐标为  511,511";
             this.textBox4.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
